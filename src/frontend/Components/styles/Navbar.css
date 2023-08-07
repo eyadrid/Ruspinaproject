@@ -15,7 +15,7 @@
 }
 
 .navbar .leftSide img {
-  width: 200px; /* Adjust the image width as needed */
+  width: 200px;
 }
 
 .navbar .rightSide {
@@ -31,7 +31,7 @@
 .navbar .rightSide button {
   color: black;
   text-decoration: none;
-  margin: 20px; /* Adjust the margin as needed */
+  margin: 20px;
 }
 .navbar .rightSide button {
   color: white;
