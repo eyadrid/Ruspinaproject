@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Form, Input, Button, Typography } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../AuthContext';
-import '../styles/Login.css';
+import '../Login/index.css';
 
 const Login = () => {
   const navigate = useNavigate();

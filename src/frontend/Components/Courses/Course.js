@@ -2,7 +2,7 @@ import React, { useContext} from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from "antd";
 import { AuthContext } from '../AuthContext';
-import "../styles/Menu.css"
+import "../Courses/index.css"
 
 function Course() {
   const navigate = useNavigate();

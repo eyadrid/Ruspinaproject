@@ -1,6 +1,6 @@
 import React from 'react';
 import { FacebookOutlined, TwitterOutlined, InstagramOutlined, YoutubeOutlined } from '@ant-design/icons';
-import "../styles/footer.css";
+import "../footerr/index.css";
 import { Layout, Row} from 'antd';
 
 const { Footer } = Layout;

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { AuthContext } from '../AuthContext';
 import { SettingOutlined } from '@ant-design/icons';
 import { useNavigate } from 'react-router-dom';
@@ -9,7 +9,7 @@ const PageContent = () => {
 
   const handleSettingClick = () => {
     if (user.isAdmin) {
-      navigate('/AdminSettings');
+      navigate('/dashboard');
     }
   };
 

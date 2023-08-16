@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Button } from 'antd';
 import { AuthContext } from '../AuthContext';
-import '../styles/Navbar.css';
+import '../Navbar/index.css';
 import Logo from '../images/logo1.png';
 
 function Navbar() {
