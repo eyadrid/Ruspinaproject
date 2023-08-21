@@ -1,4 +1,4 @@
-import '../Poster/poster.css';
+import './poster.css';
 import { useEffect, useState } from 'react';
 import { Table, Button, Modal, Form, Input, Upload, message } from 'antd';
 import { Loader } from '../index';

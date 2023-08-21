@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Input, Button, Typography, message } from 'antd';
-import "../Signup/index.css";
+import "./signup.css";
 
 const SignUp = () => {
   const [password, setPassword] = useState('');

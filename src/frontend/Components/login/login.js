@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Form, Input, Button, Typography } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import { LoginService } from "../../service/login/AuthService"
-import '../Login/index.css';
+import './login.css';
 
 const Login = () => {
   const navigate = useNavigate();

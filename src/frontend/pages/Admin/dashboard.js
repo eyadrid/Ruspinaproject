@@ -4,7 +4,7 @@ import CategoryIcon from '@mui/icons-material/Category';
 import ArticleOutlinedIcon from '@mui/icons-material/ArticleOutlined';
 import NewspaperOutlinedIcon from '@mui/icons-material/NewspaperOutlined';
 import { Layout, Menu, theme } from 'antd';
-import {Users, Categorie,Poster,Article } from '../../index';
+import {Users, Categorie,Poster,Article } from '../../Components/index';
 const { Content, Sider } = Layout;
 
 const items = [

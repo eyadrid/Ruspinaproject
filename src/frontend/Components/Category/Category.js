@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 import { Loader } from '../index';
 import TextArea from 'antd/es/input/TextArea';
-import '../Category/Category.css';
+import './category.css';
 
 
 function Categorie() {

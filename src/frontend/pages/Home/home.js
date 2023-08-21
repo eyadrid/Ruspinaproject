@@ -1,6 +1,6 @@
 import React from 'react';
-import img from "../../images/R.jpeg";
-import "../Home/home.css";
+import img from "../../Components/images/R.jpeg";
+import "./home.css";
 
 function Home() {
   return (

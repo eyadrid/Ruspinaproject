@@ -1,8 +1,8 @@
 import React, { useContext} from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from "antd";
-import { AuthContext } from '../AuthContext';
-import "../Courses/index.css"
+import { AuthContext } from '../authContext/authContext';
+import "./course.css"
 
 function Course() {
   const navigate = useNavigate();

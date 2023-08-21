@@ -1,4 +1,4 @@
-import '../Users/Users.css'
+import './users.css'
 import { Table, Button, message, Input, Modal } from 'antd';
 import { useEffect, useState } from 'react'
 import { fetchUserById, fetchAllUsers, searchUser, enableUserById } from '../../service/user/UserService'

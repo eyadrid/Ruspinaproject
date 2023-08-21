@@ -1,4 +1,4 @@
-import '../Loader/Loader.css';
+import './loader.css';
 
 const Loader = ({state}) => {
     
