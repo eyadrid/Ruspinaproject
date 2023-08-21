@@ -1,7 +1,6 @@
-import React, { useContext, useState} from 'react';
+import React, { useState } from 'react';
 import { Form, Input, Button, Typography } from 'antd';
 import { useNavigate } from 'react-router-dom';
-import { AuthContext } from '../AuthContext';
 import { LoginService } from "../../service/login/AuthService"
 import '../Login/index.css';
 
@@ -30,26 +29,19 @@ const Login = () => {
           localStorage.setItem('token', res.data.accessToken);
           localStorage.setItem('refreshToken', res.data.refreshToken);
           localStorage.setItem('user', JSON.stringify(res.data.userEntityDTO));
-          navigate('/dashboard');
+          navigate('/PageContent');
 
       }).catch((e)=>{
         console.log(e);
       })
     }
-    const { toggleLogin } = useContext(AuthContext);
-    
-    const onFinish = (values) => {
-      console.log('Form values:', values);
-      toggleLogin();
-      navigate('/PageContent');
-    };
     const handleSignUpClick = () => {
       navigate('/Signup/index');
     };
 
   return (
     <div className='loginfo'>
-      <Form name="login-form" onFinish={onFinish}>
+      <Form name="login-form" >
         <Typography.Title>Login</Typography.Title>
         <Form.Item
           label="Email"
