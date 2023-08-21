@@ -55,7 +55,6 @@ const Login = () => {
           label="Email"
           name="email"
           rules={[{ required: true, message: 'Ce champ est obligatoire' }]}
-         
         >
           <Input value={data.email} onChange={handleChangeEmail}/>
         </Form.Item>
