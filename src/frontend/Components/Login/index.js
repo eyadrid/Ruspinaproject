@@ -55,17 +55,16 @@ const Login = () => {
           label="Email"
           name="email"
           rules={[{ required: true, message: 'Ce champ est obligatoire' }]}
-          onChange={handleChangeEmail}
+         
         >
-          <Input />
+          <Input value={data.email} onChange={handleChangeEmail}/>
         </Form.Item>
         <Form.Item
           label="Password"
           name="password"
           rules={[{ required: true, message: 'Ce champ est obligatoire' }]}
-          onChange={handleChangePassword}
         >
-          <Input.Password />
+          <Input.Password value={data.password} onChange={handleChangePassword} />
         </Form.Item>
         <Form.Item>
           <Button onClick={handleSubmit} type="primary" >Login</Button>
