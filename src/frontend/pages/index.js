@@ -1,2 +1,2 @@
-export {default as DashBoard} from './Admin/dashboard';
-export {default as Home} from './Home/home';
+export {default as DashBoard} from './admin/dashboard';
+export {default as Home} from './home/home';
