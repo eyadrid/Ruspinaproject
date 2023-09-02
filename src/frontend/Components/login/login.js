@@ -29,7 +29,6 @@ const Login = () => {
           localStorage.setItem('token', res.data.accessToken);
           localStorage.setItem('refreshToken', res.data.refreshToken);
           localStorage.setItem('user', JSON.stringify(res.data.userEntityDTO));
-          navigate('/PageContent');
 
       }).catch((e)=>{
         console.log(e);

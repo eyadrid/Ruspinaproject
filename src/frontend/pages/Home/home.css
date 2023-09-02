@@ -17,6 +17,7 @@
     padding: 20px;
     border-radius: 8px ;
     text-align: center;
+    box-shadow: #121619;
 }
 .headerContainer h1{
     justify-content: center;
@@ -32,24 +33,6 @@
     font-weight: lighter;
     color: black;
     align-items: center;
-}
-.headerContainer button{
-    color: black;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    justify-content: center;
-    background-color: #121619;
-    height: 50px;
-    width: 180px;
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-}
-.headerContainer button:hover{
-    background-color: #07090a;
-    cursor: pointer;
-    transition: 0.3% erase-in;
 }
 @media only screen and  (max-width: 650px) {
     .home{
@@ -76,14 +59,5 @@
     .headerContainer a{
         font-size: 30px;
         color: white;
-    }
-    .headerContainer button{
-        background-color: white;
-        color: #121619;
-        margin-bottom: 30px;
-    }
-    .headerContainer button:hover{
-        background-color: rgb(225,225,225);
-        color: #121619;
     }
 }

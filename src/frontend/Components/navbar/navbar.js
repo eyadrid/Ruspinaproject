@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { Button } from 'antd';
 import { AuthContext } from '../authContext/authContext';
 import './navbar.css';
-import Logo from '../images/logo1.png';
+import Logo from '../../assets/logo1.png';
 
 function Navbar() {
   const navigate = useNavigate();
@@ -27,6 +27,7 @@ function Navbar() {
         <Link to="/">Home</Link>
         <Link to="/Courses">Our Training Courses</Link>
         <Link to="/About">About us</Link>
+        <Link to="/contact">Contact us </Link>
         <div className='loginButton'>
           {user.isLoggedIn ? (
             <Button onClick={handleLogoutClick}>Logout</Button>

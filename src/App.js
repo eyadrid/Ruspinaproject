@@ -1,7 +1,7 @@
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Login, SignUp, Course, Footer, Navbar, PageContent, PrivateRoute } from "./frontend/Components/index";
-import { DashBoard, Home } from "./frontend/pages/index";
+import { Login, SignUp, Course, Footer, Navbar, PrivateRoute } from "./frontend/Components/index";
+import { DashBoard, Home, Contact, About } from "./frontend/pages/index";
 import { AuthProvider } from "./frontend/Components/authContext/authContext";
 function App() {
   return (
@@ -14,7 +14,8 @@ function App() {
             <Route path="/Courses" Component={Course} />
             <Route path="/Login/index" Component={Login} />
             <Route path="/Signup/index" Component={SignUp} />
-            <Route path="/PageContent" Component={PageContent} />
+            <Route path="/contact" Component={Contact}/>
+            <Route path="/about" Component={About}/>
             <Route path="/dashboard" element=
               {
                 <PrivateRoute>

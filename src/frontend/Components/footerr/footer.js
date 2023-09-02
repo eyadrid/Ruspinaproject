@@ -1,5 +1,5 @@
 import React from 'react';
-import { FacebookOutlined, TwitterOutlined, InstagramOutlined, YoutubeOutlined } from '@ant-design/icons';
+import { FacebookOutlined, LinkedinOutlined, InstagramOutlined, YoutubeOutlined } from '@ant-design/icons';
 import "./footer.css";
 import { Layout, Row} from 'antd';
 
@@ -20,11 +20,11 @@ const AppFooter = () => {
           <div style={{ padding: '20px' }}>
             <h3>Follow us</h3>
             <div>
-              <a href="https://www.facebook.com/monsiteweb" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.facebook.com/ruspinaformationbizerte" target="_blank" rel="noopener noreferrer">
                 <FacebookOutlined style={{ fontSize: '20px', marginRight: '10px' }} />
               </a>
-              <a href="https://www.twitter.com/monsiteweb" target="_blank" rel="noopener noreferrer">
-                <TwitterOutlined style={{ fontSize: '20px', marginRight: '10px' }} />
+              <a href="https://www.linkedin.com/in/ruspina-bizerte/" target="_blank" rel="noopener noreferrer">
+                <LinkedinOutlined style={{ fontSize: '20px', marginRight: '10px' }} />
               </a>
               <a href="https://www.instagram.com/monsiteweb" target="_blank" rel="noopener noreferrer">
                 <InstagramOutlined style={{ fontSize: '20px', marginRight: '10px' }} />
