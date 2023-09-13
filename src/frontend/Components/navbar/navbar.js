@@ -1,13 +1,11 @@
-import React, { useContext, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Button } from 'antd';
-import { useAuth } from '../authContext/authContext';
-import './navbar.css';
-import Logo from '../images/logo1.png';
-import { useState } from 'react';
+import './navbar.scss';
+import {nav_logo} from '../../assets/index';
 
 import { AuthActions } from '../../redux/actions';
 import { useSelector, useDispatch } from 'react-redux';
+import { MenuIcon } from '../../assets/index';
 
 function Navbar() {
 
@@ -32,27 +30,27 @@ function Navbar() {
     navigate('/');
   };
 
-
+  const handkOnClickMenu = () => {
+    const navbarRightSide = document.querySelector('.navbar__right');
+    navbarRightSide.classList.toggle('visible'); 
+  }
   return (
     <div className='navbar'>
-      <div className='leftSide'>
-        <img src={Logo} onClick={handleLogoClick} alt="Logo" />
+      <div className='navbar__left'>
+        <img src={nav_logo} alt='logo' className='navbar__logo' onClick={handleLogoClick} />
       </div>
-      <div className='rightSide'>
-        <Link to="/">Home</Link>
-        <Link to="/courses">Our Training Courses</Link>
-        <Link to="/about">About us</Link>
-        <Link to="/contact">Contact Us</Link>
+      <div className='navbar__menu' >
+        <MenuIcon className='navbar__menu__icon' onClick = {handkOnClickMenu}/>
+      </div>
+      <div className='navbar__right'>
+        <Link className='navlinks' to='/'>Home</Link>
+        <Link className='navlinks'to='/courses'>Courses</Link>
+        <Link className='navlinks'to='/about'>About</Link>
+        <Link className='navlinks'to='/contact'>Contact</Link>
         {(auth.user?.role?.name === 'ADMIN' && auth.isAuthenticated) &&
           <Link to="/dashboard">DashBoard</Link>
         }
-        <div className='loginButton'>
-          {(auth.isAuthenticated) ? (
-            <Button onClick={handleLogoutClick}>Logout</Button>
-          ) : (
-            <Button onClick={handleLoginClick}>Login</Button>
-          )}
-        </div>
+        <Button type="primary" className="btn btn-primary" onClick={auth.isAuthenticated ? handleLogoutClick : handleLoginClick}>{auth.isAuthenticated ? "Logout" : "Login"}</Button>
       </div>
     </div>
   );
