@@ -75,7 +75,7 @@
     z-index: 999;
     padding: 1em;
     position: absolute;
-    bottom: -265px;
+    top: 100px;
     
     background-color: #ffffff;
     flex-direction: column;
@@ -88,7 +88,7 @@
     transform: scaleY(0);
     transform-origin: top;
     transition: transform 0.3s ease-in-out;
-    border-radius: 10px;
+    border-radius:  0 0 10px 10px;
   }
 }
 

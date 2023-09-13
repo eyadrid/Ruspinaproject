@@ -104,14 +104,7 @@ const Article = () => {
             dataIndex: 'action',
             render: (_, record) => (
                 <>
-                    <Button
-                        className="btn btn-danger btn-green"
-                        type="primary"
-
-                        onClick={() => { onDetailArticle(record) }}
-                    >
-                        Details
-                    </Button>
+                   
 
                     <Button
                         className="btn btn-danger"
@@ -128,6 +121,14 @@ const Article = () => {
                         onClick={() => { onEditArticle(record) }}
                     >
                         Edit
+                    </Button>
+                    <Button
+                        className="btn btn-danger btn-green"
+                        type="primary"
+
+                        onClick={() => { onDetailArticle(record) }}
+                    >
+                        Details
                     </Button>
                 </>
             ),
