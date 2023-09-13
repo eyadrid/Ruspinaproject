@@ -1,32 +1,42 @@
-import "./App.css";
+import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Login, SignUp, Course, Footer, Navbar, PageContent, PrivateRoute, Slider,Loader, BreadCrumb, ArticleDetails } from "./frontend/Components/index";
-import { DashBoard, Home , About, Contact} from "./frontend/pages/index";
-import { AuthProvider } from "./frontend/Components/authContext/authContext";
 import { Provider } from "react-redux";
-import store from './frontend/redux/store'
+import { AuthProvider } from "./frontend/Components/authContext/authContext";
+import store from './frontend/redux/store';
+import {
+  Login,
+  SignUp,
+  Course,
+  PageContent,
+  PrivateRoute,
+  Loader,
+  ArticleDetails,
+  ScrollToTop,
+  Layout
+} from "./frontend/Components/index";
+import { DashBoard, Home, About, Contact } from "./frontend/pages/index";
+
 function App() {
-
-    
-
   return (
     <div className="App">
-      <Provider store = {store}>
+      <Provider store={store}>
         <Loader />
         <AuthProvider>
           <Router>
-            <Navbar />
+            <ScrollToTop />
+            <Layout>
             <Routes>
-              <Route path="/" Component={Home} />
-              <Route path="/courses" Component={Course} />
-              <Route path="/login" Component={Login} />
-              <Route path="/signup" Component={SignUp} />
-              <Route path="/about" Component={About} />
-              <Route path="/contact" Component={Contact} />
-              <Route path="/pageContent" Component={PageContent} />
+              <Route path="/" element={<Home />} />
+              <Route path="/courses" element={<Course />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<SignUp />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/pageContent" element={<PageContent />} />
               <Route path="/article/:articleId" element={<ArticleDetails />} />
-              <Route path="/dashboard" element=
-                {
+              <Route
+                path="/dashboard"
+                element={
                   <PrivateRoute>
                     <DashBoard />
                   </PrivateRoute>
@@ -34,11 +44,12 @@ function App() {
               />
               <Route path="*" element={<h1>Not Found</h1>} />
             </Routes>
-            <Footer />
+            </Layout>
           </Router>
         </AuthProvider>
       </Provider>
     </div>
   );
 }
+
 export default App;

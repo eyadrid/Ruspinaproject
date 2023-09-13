@@ -15,3 +15,5 @@ export {default as Card} from './card/Card';
 export {default as BreadCrumb} from './breadcrumb/BreadCrumb';
 export {default as ArticleDetails} from './articleDetails/ArticleDetails';
 export {default as Chapter} from './chapter/Chapter';
+export {default as ScrollToTop} from './scrolltotop/ScrollToTop';
+export {default as Layout} from './layout/Layout';

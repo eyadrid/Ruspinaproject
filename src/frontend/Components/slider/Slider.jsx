@@ -8,6 +8,8 @@ const Slider = ({ slides }) => {
 
 
 
+    
+
     const nextSlide = () => {
         if (slides.length === 0)
             return;
@@ -15,6 +17,7 @@ const Slider = ({ slides }) => {
         const shouldResetIndex = currentImageIndex === lastIndex;
         const index = shouldResetIndex ? 0 : currentImageIndex + 1;
         setCurrentImageIndex(index);
+        
         console.log(currentImageIndex);
     }
 
@@ -24,19 +27,39 @@ const Slider = ({ slides }) => {
         const lastIndex = slides.length - 1;
         const shouldResetIndex = currentImageIndex === 0;
         const index = shouldResetIndex ? lastIndex : currentImageIndex - 1;
+    
         setCurrentImageIndex(index);
     }
 
+   
 
+    const moveToSlideWithIndex = (index) => {
+        setCurrentImageIndex(index);
+       
+    }
+
+    const highlightCurrentSlide = () => {
+        const images = document.querySelectorAll('.slider__image_shows__item img');
+        images.forEach((image, index) => {
+            if (index === currentImageIndex) {
+                image.classList.add('active');
+            }
+            else {
+                image.classList.remove('active');
+            }
+        })
+    }
 
     useEffect(() => {
         const interval = setInterval(() => {
-            nextSlide();
+            nextSlide();   
         }, 5000);
         return () => clearInterval(interval);
+    }, [[],currentImageIndex])
 
+    useEffect (() => {
+        highlightCurrentSlide();
     }, [currentImageIndex])
-
     return (
         <div className="slider">
             <div
@@ -70,6 +93,20 @@ const Slider = ({ slides }) => {
                 <KeyboardArrowRightIcon
                     className='slider__navigation__next navigation__icon'
                     onClick={nextSlide} />
+            </div>
+            <div className="slider__image__shows">
+                {
+                    slides.map((slide, index) => (
+                        
+                        <div className='slider__image_shows__item' key={index}>
+                            <img src={slide.image} alt="" onClick={()=>moveToSlideWithIndex(index)} />
+                        </div>
+
+                    ))
+                }
+            </div>
+            <div className="slider__navigation__indicator">
+
             </div>
         </div>
     )

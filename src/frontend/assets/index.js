@@ -8,7 +8,6 @@ export {default as KeyboardArrowRightIcon} from  '@mui/icons-material/KeyboardAr
 export {default as about__bg} from  './images/about__bg.jpg';
 export {default as noData} from  './images/noData.jpg';
 export {default as cours__bg} from  './images/cours__bg.png';
-export {default as image2} from './images/image2.jpg';
 export {default as LocalOfferOutlinedIcon} from '@mui/icons-material/LocalOfferOutlined';
 export {default as CalendarTodayOutlinedIcon} from '@mui/icons-material/CalendarTodayOutlined';
 export {default as AccessTimeOutlinedIcon} from'@mui/icons-material/AccessTimeOutlined';

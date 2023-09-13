@@ -19,7 +19,7 @@ const Users = () => {
     { title: 'Email', dataIndex: 'email', key: 'email' },
     { title: 'Address', dataIndex: 'address', key: 'address' },
     { title: 'Phone', dataIndex: 'phoneNumber', key: 'phoneNumber' },
-    { title: 'Enabled', dataIndex: 'enabled', key: 'enabled' },
+    { title: 'Enabled', dataIndex: 'enabled', key: 'enabled' , sorter: (a,b) => a.enabled.localeCompare(b.enabled)},
     {
       title: 'Action',
       dataIndex: 'action',

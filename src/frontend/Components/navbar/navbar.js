@@ -33,14 +33,15 @@ function Navbar() {
   const handkOnClickMenu = () => {
     const navbarRightSide = document.querySelector('.navbar__right');
     navbarRightSide.classList.toggle('visible'); 
+    console.log(navbarRightSide);
   }
   return (
     <div className='navbar'>
       <div className='navbar__left'>
         <img src={nav_logo} alt='logo' className='navbar__logo' onClick={handleLogoClick} />
       </div>
-      <div className='navbar__menu' >
-        <MenuIcon className='navbar__menu__icon' onClick = {handkOnClickMenu}/>
+      <div className='navbar__menu'  onClick= {handkOnClickMenu}>
+        <MenuIcon className='navbar__menu__icon' />
       </div>
       <div className='navbar__right'>
         <Link className='navlinks' to='/'>Home</Link>
