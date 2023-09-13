@@ -61,7 +61,7 @@ const SignUp = () => {
   const register = async () => {
     try {
       const response = await RegisterService(signupData);
-      console.log(response);
+      
       notification.info({ message: 'Please check your email for verification.' , placement: 'topRight', duration: 30});
       message.success('Sign up successful! ');
     } catch (error) {

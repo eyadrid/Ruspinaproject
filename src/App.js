@@ -34,9 +34,7 @@ function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/pageContent" element={<PageContent />} />
               <Route path="/article/:articleId" element={<ArticleDetails />} />
-              <Route
-                path="/dashboard"
-                element={
+              <Route path="/dashboard"element={
                   <PrivateRoute>
                     <DashBoard />
                   </PrivateRoute>

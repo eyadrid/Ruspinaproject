@@ -18,7 +18,6 @@ const Slider = ({ slides }) => {
         const index = shouldResetIndex ? 0 : currentImageIndex + 1;
         setCurrentImageIndex(index);
         
-        console.log(currentImageIndex);
     }
 
     const prevSlide = () => {
@@ -49,16 +48,28 @@ const Slider = ({ slides }) => {
             }
         })
     }
-
+    const updateIndicatorAnimation = () => {
+        const indicator = document.querySelector('.slider__navigation__indicator');
+        if (indicator) {
+            indicator.style.animation = 'none'; // Disable the animation temporarily
+            void indicator.offsetWidth; // Force reflow to reset the width
+            indicator.style.animation = 'loading 5s ease-in-out forwards'; // Re-enable the animation
+          }
+      };
     useEffect(() => {
         const interval = setInterval(() => {
-            nextSlide();   
+            nextSlide();
         }, 5000);
         return () => clearInterval(interval);
     }, [[],currentImageIndex])
 
+    useEffect(() => {
+        highlightCurrentSlide();
+        updateIndicatorAnimation();   
+    }, [])
     useEffect (() => {
         highlightCurrentSlide();
+        updateIndicatorAnimation(); 
     }, [currentImageIndex])
     return (
         <div className="slider">

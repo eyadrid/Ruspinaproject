@@ -125,6 +125,14 @@
     animation: loading 5s ease-in-out forwards;
 }
 
+@keyframes loading {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+}
 @keyframes goRight {
     0%{
         transform: translateX(15px);
@@ -143,12 +151,3 @@
     }
 }
 
-
-@keyframes loading {
-    0%{
-        width: 0;
-    }
-    100%{
-        width: 100%;
-    }
-}
