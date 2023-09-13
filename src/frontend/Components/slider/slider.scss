@@ -1,0 +1,99 @@
+.slider {
+    width: 100%;
+    height: 632px;
+    position: relative;
+    overflow: hidden;
+    .slider__inner {
+        white-space: nowrap;
+        transition: transform 0.3s ease-in-out;
+        height: 100%;
+
+        .slider__inner__slide {
+            display: inline-flex;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .slider__inner__slide__description{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 30%;
+                height: 20%;
+                background-color: #ffffff86;
+                border-radius: 20px;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                span{
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    color: #000000;
+                    text-align: center;
+                    margin-bottom: 20px;
+                    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                }
+            }
+        }
+    }
+
+    .slider__navigation {
+        width: 100%;
+        position: absolute;
+        content: "";
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        top: 50%;
+
+        .navigation__icon {
+            font-size: 4.5rem;
+            color: #ffffff;
+            background-color: #00000046;
+            border-radius: 50%;
+            transition: color 0.15s ease-in;
+            &:hover {
+                color: #fff;
+            }
+        }
+        .slider__navigation__prev{
+            &:active{
+                animation: goLeft 0.5s ease-in-out forwards;
+            }
+        }
+        .slider__navigation__next{
+           
+            &:active{
+                animation: goRight 0.5s ease-in-out forwards;
+            }
+        }
+    }
+}
+
+
+@keyframes goRight {
+    0%{
+        transform: translateX(15px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes goLeft {
+    0%{
+        transform: translateX(-15px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
